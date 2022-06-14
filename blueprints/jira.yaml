@@ -5,7 +5,7 @@ inputs:
   host:
     type: string
     display-style: normal
-    default: "eks"
+    default: "eksa"
     description: "Execution host name"
 
 grains:
