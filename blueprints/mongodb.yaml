@@ -74,7 +74,7 @@ inputs:
   host:
     type: string
     display-style: normal
-    default: "eksa"
+    default: "eks"
     description: "Execution host name"
 grains:
   mongodb:
