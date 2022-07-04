@@ -12,8 +12,8 @@ grains:
 
   nginx:
     kind: helm
-    namespace: ilya-sb-2
     spec:
+      namespace: ilya-sb-2
       source:
         path: https://github.com/bitnami/charts.git//bitnami/nginx
       host:
