@@ -2,6 +2,10 @@ spec_version: 2
 description: Blueprint for bitnami nginx helm chart 
 
 inputs:
+  namespace:
+    type: string
+    description: "Target namespace"
+
   host:
     type: string
     display-style: normal
@@ -13,7 +17,7 @@ grains:
   nginx:
     kind: helm
     spec:
-      namespace: ilya-sb-2
+      namespace: '{{.inputs.namespace}}'
       source:
         path: https://github.com/bitnami/charts.git//bitnami/nginx
       host:
