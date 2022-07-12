@@ -8,6 +8,10 @@ inputs:
     default: "eks"
     description: "Execution host name"
 
+outputs:
+  sasha:
+    value: 'Sasha'
+
 grains:
   jira:
       kind: helm
