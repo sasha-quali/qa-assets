@@ -1,5 +1,5 @@
 spec_version: 2-preview
-description: Initializing a Jira instance
+description: Initializing a Jira instance from a branch
 
 inputs:
   host:
