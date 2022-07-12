@@ -12,15 +12,22 @@ inputs:
     default: "eks"
     description: "Execution host name"
 
+  prm:
+    type: string
+    default: sss
+    description: Tmp
+
 grains:
 
   nginx:
     kind: helm
     spec:
-      namespace: '{{.inputs.namespace}}'
+      inputs:
+        - namespace
+      namespace: '{{.inputs.namespace}}-{{namespace}}-{{.inputs.host}}'
       source:
         path: https://github.com/bitnami/charts.git//bitnami/nginx
       host:
         name: '{{.inputs.host}}'
       commands:
-        - dep up bitnami/nginx
+        - dep up bitnami/nginx {{.inputs.prm}} {{.inputs.namespace}}-{{namespace}}
