@@ -19,7 +19,7 @@ grains:
     spec:
       inputs:
         - namespace
-      namespace: '{{.inputs.namespace}}-{{namespace}}-{{.inputs.host}}'
+      namespace: '{{.inputs.namespace}}'
       source:
         path: https://github.com/bitnami/charts.git//bitnami/nginx
       host:
