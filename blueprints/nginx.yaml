@@ -12,11 +12,6 @@ inputs:
     default: "eks"
     description: "Execution host name"
 
-  prm:
-    type: string
-    default: sss
-    description: Tmp
-
 grains:
 
   nginx:
@@ -30,4 +25,4 @@ grains:
       host:
         name: '{{.inputs.host}}'
       commands:
-        - dep up bitnami/nginx {{.inputs.prm}} {{.inputs.namespace}}-{{namespace}}
+        - dep up bitnami/nginx
